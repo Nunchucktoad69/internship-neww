@@ -2,6 +2,10 @@
 /* HEADER */
 /* ********* */
 
+html {
+  scroll-behavior: smooth;
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -290,6 +294,36 @@ FOOTER
 
 .grid--footer {
   grid-template-columns: 1.5fr 1fr 1.5fr;
+  grid-template-rows: 3fr 1fr;
+}
+
+.row-2 {
+  grid-column-end: 3;
+}
+
+.home-page {
+  text-decoration: none;
+  cursor: pointer;
+
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  padding: 0.8rem 1.6rem;
+  transition: all 0.3s;
+}
+
+.home-page:link,
+.home-page:visited {
+  background-color: rgb(55, 56, 61, 0);
+  color: #fff;
+}
+
+.home-page:hover,
+.home-page:active {
+  background-color: #cf711f;
 }
 
 .footer-logo-text {
