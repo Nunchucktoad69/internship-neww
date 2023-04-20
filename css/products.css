@@ -1,0 +1,219 @@
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../assets/fonts/bebas-neue-thin.otf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../assets/fonts/bebas-neue-light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../assets/fonts/bebas-neue-regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../assets/fonts/bebas-neue-bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  line-height: 1;
+  font-weight: 400;
+  background-color: #111;
+  color: #fff;
+}
+
+/* GENERAL REUSABLE COMPONENTS */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 4.8rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+/*
+PRODUCTS
+*/
+
+.heading-primary,
+.heading-secondary {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+}
+
+.subheading {
+  font-family: "Bebas Neue", sans-serif;
+  display: block;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #fe9b09;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  padding-top: 12.8rem;
+  letter-spacing: 0.25rem;
+}
+
+.heading-secondary {
+  font-size: 4.8rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+main {
+  background-color: #111;
+}
+.products-grid {
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #fff;
+  color: black;
+}
+
+/*
+FOOTER
+*/
+
+.logo {
+  height: 6rem;
+}
+
+.footer {
+  padding: 12.8rem 0;
+  background-color: rgb(55, 56, 61, 0.5);
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1fr 1.5fr;
+  grid-template-rows: 3fr 1fr;
+}
+
+.row-2 {
+  grid-column-end: 3;
+}
+
+.home-page {
+  text-decoration: none;
+  cursor: pointer;
+
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  padding: 0.8rem 1.6rem;
+  transition: all 0.3s;
+}
+
+.home-page:link,
+.home-page:visited {
+  background-color: rgb(55, 56, 61, 0);
+  color: #fff;
+}
+
+.home-page:hover,
+.home-page:active {
+  background-color: #cf711f;
+}
+
+.footer-logo-text {
+  display: block;
+  margin-bottom: 3.2rem;
+  font-size: 3.6rem;
+  text-decoration: none;
+  color: white;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #fe9b09;
+}
+
+.copy-rights {
+  margin-top: 3.2rem;
+  font-size: 1.2rem;
+}
+
+.col-two-content {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.col-two-link,
+.col-three-link {
+  text-decoration: none;
+  color: white;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.col-three-link {
+  margin-bottom: 4.8rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: white;
+}
+.address {
+  font-size: 1.6rem;
+  margin-bottom: 2.4rem;
+}
