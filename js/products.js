@@ -11,12 +11,6 @@ closeCart.onclick = () => {
   cart.classList.remove("active");
 };
 
-if (document.readyState == "loading") {
-  document.addEventListener("DOMContentLoaded", ready);
-} else {
-  ready();
-}
-
 //making function
 function ready() {
   //remove items from cart
@@ -44,6 +38,7 @@ function ready() {
     .addEventListener("click", buyButtonClicked)
     .addEventListener("click", buyButtonClicked);
 }
+
 //buy button
 function buyButtonClicked() {
   alert("Your Order is placed");
@@ -53,12 +48,14 @@ function buyButtonClicked() {
   }
   updatetotal();
 }
+
 //remove items from cart
 function removeCartItem(event) {
   var buttonClicked = event.target;
   buttonClicked.parentElement.remove();
   updatetotal();
 }
+
 //quantity changes
 function quantityChanged(event) {
   var input = event.target;
@@ -67,6 +64,7 @@ function quantityChanged(event) {
   }
   updatetotal();
 }
+
 //add to cart
 function addCartClicked(event) {
   var button = event.target;
@@ -78,6 +76,7 @@ function addCartClicked(event) {
   addProductToCart(title, price, productImg);
   updatetotal();
 }
+
 function addProductToCart(title, price, productImg) {
   var cartShopBox = document.createElement("div");
   cartShopBox.classList.add("cart-box");
@@ -90,15 +89,17 @@ function addProductToCart(title, price, productImg) {
     }
   }
 
-  var cartBoxContent = `<img src="${productImg}" alt="" class="cart-img">
-                    <div class="details-box">
-                    <div class="cart-product-title">${title}</div>
-                    <div class="cart-price">${price}</div>
-                    <input type="number" value="1" class="cart-quantity">
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill cart-remove " viewBox="0 0 16 16" id="cart-remove">
-                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/> 
-                    </svg>`;
+  var cartBoxContent = `
+    <img src="${productImg}" alt="" class="cart-img" />
+    <div class="details-box">
+      <div class="cart-product-title">${title}</div>
+      <div class="cart-price">${price}</div>
+      <input type="number" value="1" class="cart-quantity" />
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill cart-remove " viewBox="0 0 16 16" id="cart-remove">
+      <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+    </svg>
+  `;
 
   cartShopBox.innerHTML = cartBoxContent;
   cartItems.append(cartShopBox);
@@ -128,3 +129,5 @@ function updatetotal() {
 
   document.getElementsByClassName("total-price")[0].innerText = "Rs" + total;
 }
+
+ready();
