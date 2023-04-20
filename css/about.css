@@ -337,6 +337,7 @@ FOOTER
 
 .btn:hover {
   background-color: #111;
+  color: #fff;
 }
 
 .map {
