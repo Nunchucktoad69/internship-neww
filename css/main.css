@@ -319,20 +319,41 @@ TESTIMONIALS
   background-color: #cf711f;
   color: #333;
   max-width: 100rem;
-  height: 60rem;
+  height: 40rem;
   margin: 0 auto;
+  position: relative;
 }
 
 .testimonial-review {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 3rem; */
+}
+.testimonial-grid {
+  grid-template-columns: 1fr 2fr;
 }
 
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6px;
+  justify-content: center;
+}
+
+.top-g {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .testimonial-stars {
   display: flex;
   gap: 1.6rem;
   padding: 4rem 4rem 0;
+  /* position: absolute;
+  top: 5%;
+  left: 60%; */
+  justify-content: center;
+  align-items: center;
 }
 
 .star-icon {
@@ -346,7 +367,7 @@ TESTIMONIALS
 
 .testimonial-text {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-style: italic;
 }
 
@@ -354,20 +375,26 @@ TESTIMONIALS
   padding: 4rem 8rem;
 }
 .testimonial-user {
-  display: flex;
-  align-items: center;
-  gap: 8rem;
+  /* display: flex; */
+  /* align-items: center;
+  gap: 5rem; */
+  /* position: absolute;
+  left: 4%;
+  top: 10%; */
 }
 
 .test-img {
-  height: 16rem;
+  height: 25rem;
+  position: absolute;
+  top: 23%;
 }
 
 .test-user {
-  font-size: 8rem;
+  font-size: 3.2rem;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
   line-height: 2rem;
+  padding: 4rem 4rem 0;
 }
 
 /*
