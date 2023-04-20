@@ -113,6 +113,9 @@ body {
   align-items: center;
 }
 
+.pics {
+  margin-bottom: 9.6rem;
+}
 .staff-element {
   display: flex;
   flex-direction: column;
@@ -272,6 +275,7 @@ FOOTER
 /* newsletter */
 .newsletter {
   margin-top: 9.6rem;
+  margin-bottom: 9.6rem;
   height: 600px;
   padding: 10rem;
   background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
