@@ -287,6 +287,17 @@ FOOTER
 CART
  */
 
+.cart-flex {
+  display: flex;
+  gap: 2rem;
+}
+
+.cart-icon {
+  height: 6rem;
+  width: 6rem;
+  padding-bottom: 6rem;
+}
+
 .cart {
   position: fixed;
   top: 0;
@@ -294,7 +305,7 @@ CART
   width: 360px;
   min-height: 100vh;
   padding: 20px;
-  background: var(--bg-color);
+  background: #111;
   box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
   transition: 0.3s;
 }
@@ -335,6 +346,57 @@ CART
   text-transform: uppercase;
 }
 
+.cart-price {
+  font-weight: 500;
+}
+
 .cart-quantity {
-  border: 1px solid var(--text-color);
+  border: 1px solid #111;
+  outline-color: #111;
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cart-remove {
+  font-size: 24px;
+  color: #111;
+  cursor: pointer;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px solid white;
+}
+
+.total-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.total-price {
+  margin-left: 0.5rem;
+}
+
+#close-cart {
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-buy {
+  display: flex;
+  margin: 1.5rem auto 0 auto;
+  padding: 12px 20px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
 }
