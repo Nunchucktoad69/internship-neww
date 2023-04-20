@@ -67,6 +67,7 @@ body {
   margin-bottom: 4.5rem;
   text-align: center;
   color: #fe9b09;
+  display: block;
 }
 
 .about-text {
@@ -74,6 +75,7 @@ body {
   font-size: 1.8rem;
   line-height: 5rem;
   margin-bottom: 9.6rem;
+  font-family: "Rubik", sans-serif;
 }
 
 .container {
@@ -86,6 +88,7 @@ body {
   display: grid;
   row-gap: 9.6rem;
   column-gap: 4.8rem;
+  font-family: "Rubik", sans-serif;
 }
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
@@ -141,6 +144,7 @@ FOOTER
 .footer {
   padding: 12.8rem 0;
   background-color: rgb(55, 56, 61, 0.5);
+  font-family: "Rubik", sans-serif;
 }
 
 .grid--footer {
@@ -231,6 +235,11 @@ FOOTER
 
 .col-three-link {
   margin-bottom: 4.8rem;
+}
+
+.col-two-link:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .contacts {
