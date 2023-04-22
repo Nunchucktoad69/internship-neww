@@ -146,6 +146,14 @@
     column-gap: 4rem;
   }
 
+  .heading-secondary {
+    font-size: 3.2rem;
+  }
+
+  .subheading {
+    font-size: 2.4rem;
+  }
+
   .program-img {
     width: 60%;
   }
