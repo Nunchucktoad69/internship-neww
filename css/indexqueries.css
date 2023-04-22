@@ -170,8 +170,13 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .grid--4-cols {
-    max-width: 30rem;
-    /* width: 100%; */
+  .plans-container {
+    align-items: center;
+    justify-items: center;
+  }
+
+  .plan {
+    height: 36rem;
+    max-width: 27rem;
   }
 }
