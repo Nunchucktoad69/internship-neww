@@ -222,9 +222,9 @@ h1 {
 TESTIMONIALS
 */
 .slider {
-  max-width: 100rem;
-  height: 50rem;
-  margin: 0 auto;
+  margin: 0 6.4rem;
+  height: 30rem;
+
   position: relative;
 
   /* IN THE END */
@@ -232,30 +232,44 @@ TESTIMONIALS
 }
 
 .slide {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 50rem;
-
   display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 4.8rem;
+  background-color: #cf711f;
+  padding: 4.8rem;
+  position: absolute;
 
   /* THIS creates the animation! */
   transition: transform 1s;
 }
 
-.slide > img {
-  /* Only for images that have different size than slide */
-  width: 100%;
+.user-avatar-wrapper {
   height: 100%;
-  object-fit: cover;
+}
+
+.user-avatar {
+  max-width: 100%;
+}
+
+.user-review-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.username {
+  font-size: 3.2rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
 }
 
 .slider__btn {
   position: absolute;
   top: 50%;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   border: none;
   background: rgba(255, 255, 255, 0.7);
@@ -269,18 +283,18 @@ TESTIMONIALS
 }
 
 .slider__btn--left {
-  left: 6%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  transform: translate(-25%, -50%);
 }
 
 .slider__btn--right {
-  right: 6%;
-  transform: translate(50%, -50%);
+  right: 0;
+  transform: translate(25%, -50%);
 }
 
 .dots {
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -307,94 +321,23 @@ TESTIMONIALS
 
 .dots__dot--active {
   /* background-color: #fff; */
-  background-color: #888;
+  background-color: #62360f;
   opacity: 1;
 }
 
-/* .slide {
-  padding: 4rem 0;
-} */
-
-.testimonial {
-  background-color: #cf711f;
-  color: #333;
-  max-width: 100rem;
-  height: 40rem;
-  margin: 0 auto;
-  position: relative;
-}
-
-.testimonial-review {
-  /* display: flex;
-  flex-direction: column;
-  gap: 3rem; */
-}
-.testimonial-grid {
-  grid-template-columns: 1fr 2fr;
-}
-
-.review {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6px;
-  justify-content: center;
-}
-
-.top-g {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .testimonial-stars {
   display: flex;
-  gap: 1.6rem;
-  padding: 4rem 4rem 0;
-  /* position: absolute;
-  top: 5%;
-  left: 60%; */
-  justify-content: center;
-  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 3rem;
 }
 
 .star-icon {
-  height: 6rem;
-  width: 3rem;
-}
-
-.testimonial-text-container {
-  padding: 3rem 4rem 6rem 4rem;
+  height: 1.8rem;
+  width: 1.8rem;
 }
 
 .testimonial-text {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 3.2rem;
-  font-style: italic;
-}
-
-.testimonial-user-container {
-  padding: 4rem 8rem;
-}
-.testimonial-user {
-  /* display: flex; */
-  /* align-items: center;
-  gap: 5rem; */
-  /* position: absolute;
-  left: 4%;
-  top: 10%; */
-}
-
-.test-img {
-  height: 25rem;
-  position: absolute;
-  top: 23%;
-}
-
-.test-user {
-  font-size: 3.2rem;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 700;
-  line-height: 2rem;
-  padding: 4rem 4rem 0;
+  font-size: 2.4rem;
 }
 
 /*
