@@ -1,0 +1,177 @@
+/* 1344px */
+@media (max-width: 84rem) {
+  .subheading {
+    font-size: 3rem;
+  }
+
+  .heading-primary {
+    font-size: 5.2rem;
+  }
+
+  .heading-secondary {
+    font-size: 4.4rem;
+  }
+}
+
+/* 1136px */
+@media (max-width: 74rem) {
+  .nav-container {
+    padding: 1.5rem 2.7rem;
+  }
+
+  h1 {
+    font-size: 9rem;
+  }
+
+  .header-text {
+    font-size: 2.6rem;
+    max-width: 100rem;
+  }
+
+  .container {
+    max-width: 100rem;
+  }
+
+  .section {
+    padding: 8rem 0;
+  }
+
+  .program-heading-box {
+    margin: 1.5rem 0;
+    gap: 1.5rem;
+  }
+
+  .program-description {
+    font-size: 1.6rem;
+  }
+
+  .plan {
+    padding: 2rem 2.6rem;
+  }
+
+  .plan-type {
+    font-size: 1.6rem;
+    /* padding: 0.6rem; */
+  }
+
+  .plan-rs {
+    font-size: 2.6rem;
+  }
+
+  .plan-cost {
+    font-size: 5rem;
+  }
+
+  .plan-about {
+    font-size: 1.6rem;
+    padding: 3.6rem 0 1.4rem 0;
+  }
+
+  .slider {
+    max-width: 80rem;
+    height: 40rem;
+  }
+
+  .slider-btn {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .testimonial {
+    max-width: 80rem;
+  }
+
+  .review {
+    gap: 1rem;
+  }
+
+  .testimonial-stars {
+    padding: 2rem 2rem 0 0;
+  }
+
+  .testimonial-text-container {
+    padding: 1.5rem 3.5rem 5.5rem 3.5rem;
+  }
+
+  .testimonial-text {
+    max-width: 40rem;
+    font-size: 2.4rem;
+  }
+
+  .test-img {
+    height: 20rem;
+    top: 23%;
+  }
+
+  .test-user {
+    font-size: 2.6rem;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    font-size: 1.6rem;
+  }
+}
+
+/* 976px */
+@media (max-width: 61rem) {
+  .nav-container {
+    padding: 1rem 2rem;
+    max-width: 80rem;
+  }
+
+  .header-nav-list {
+    gap: 2rem;
+  }
+  .header-text {
+    max-width: 80rem;
+  }
+
+  .header-nav-link:link,
+  .header-nav-link:visited {
+    font-size: 1.4rem;
+  }
+
+  h1 {
+    font-size: 7rem;
+  }
+
+  .header-text {
+    font-size: 2rem;
+  }
+
+  .grid {
+    row-gap: 8rem;
+    column-gap: 4rem;
+  }
+
+  .program-img {
+    width: 60%;
+  }
+
+  .program-description {
+    font-size: 1.4rem;
+  }
+
+  .program-number {
+    font-size: 2.6rem;
+  }
+
+  .program- {
+    font-size: 2.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.6rem;
+  }
+
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--4-cols {
+    max-width: 30rem;
+    /* width: 100%; */
+  }
+}

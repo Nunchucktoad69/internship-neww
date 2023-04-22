@@ -174,7 +174,7 @@ h1 {
 .plan-type {
   font-size: 2rem;
   font-weight: 500;
-  padding: 0.8rem;
+  padding: 0.8rem 0;
   text-transform: uppercase;
   font-weight: bold;
   color: #fe9b09;
