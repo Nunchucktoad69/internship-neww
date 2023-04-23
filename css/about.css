@@ -285,7 +285,7 @@ FOOTER
 .newsletter {
   margin-top: 9.6rem;
   margin-bottom: 9.6rem;
-  height: 600px;
+  height: 60rem;
   padding: 10rem;
   background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
   border-radius: 11px;
@@ -342,6 +342,10 @@ FOOTER
 
 .map {
   margin-top: 9.6rem;
+}
+
+.cta-map {
+  padding-bottom: 9.6rem;
 }
 
 .map iframe {
