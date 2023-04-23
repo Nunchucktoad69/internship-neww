@@ -118,6 +118,7 @@
   }
 }
 
+/* 592px */
 @media (max-width: 37rem) {
   .map iframe {
     width: 60rem;

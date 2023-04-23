@@ -268,6 +268,10 @@
   }
 
   .heading-tertiary {
+    font-size: 2rem;
+  }
+
+  .heading-secondary {
     font-size: 2.4rem;
   }
 
@@ -306,9 +310,54 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
+
+  .user-avatar {
+    min-height: 6rem;
+    min-width: 6rem;
+  }
 }
 
 /* 544px */
 @media (max-width: 34rem) {
-  /* mobile nav */
+  html {
+    font-size: 50%;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  .grid--2-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .header-text {
+    font-size: 1.4rem;
+    max-width: 30rem;
+  }
+
+  .slide {
+    gap: 2.4rem;
+  }
+
+  .username {
+    font-size: 2.2rem;
+  }
+
+  .testimonial-stars {
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    padding: 0 3.2rem;
+  }
+
+  .slider__btn {
+    top: 40%;
+  }
 }
