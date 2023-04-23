@@ -19,16 +19,29 @@
     font-size: 50%;
   }
 
+  .grid--2-cols {
+    align-items: center;
+    justify-content: center;
+  }
+
   .newsletter {
     height: 55rem;
     padding: 6rem;
-    margin: 0rem;
+    /* margin-top: 9.6rem; */
+  }
+
+  .map {
+    margin-top: 0rem;
   }
 
   .btn,
   .btn:link,
   .btn:visited {
     font-size: 1.6rem;
+  }
+
+  .heading-secondary {
+    margin-bottom: 2rem;
   }
 }
 
