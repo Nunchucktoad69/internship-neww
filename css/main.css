@@ -33,6 +33,25 @@ html {
   z-index: 100;
 }
 
+/* MOBILE  */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #fff !important;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
 .hero {
   height: 100vh;
   display: flex;
