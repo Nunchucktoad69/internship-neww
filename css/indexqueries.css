@@ -152,7 +152,7 @@
   } */
 
   .header-nav-list {
-    gap: 2rem;
+    gap: 4.8rem;
   }
   .header-text {
     max-width: 60rem;
@@ -315,6 +315,10 @@
     min-height: 6rem;
     min-width: 6rem;
   }
+
+  .program-number {
+    font-size: 2rem;
+  }
 }
 
 /* 544px */
@@ -333,6 +337,22 @@
   .grid--2-cols,
   .grid--4-cols {
     grid-template-columns: 1fr;
+  }
+
+  .program-text-box:nth-child(4) {
+    grid-row: 3;
+  }
+
+  .program-text-box:nth-child(8) {
+    grid-row: 7;
+  }
+
+  .program-text-box:nth-child(12) {
+    grid-row: 11;
+  }
+
+  .heading-tertiary {
+    letter-spacing: 0.4rem;
   }
 
   .header-text {
