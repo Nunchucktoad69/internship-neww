@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import "src/styles/header.scss";
+import "./style.scss";
 
 const links = [
-  { text: "BMI", href: "#" },
+  { text: "BMI", href: "/#" },
   { text: "Products", href: "/products" },
-  { text: "Routines", href: "#section--3" },
+  { text: "Routines", href: "/#section--3" },
   { text: "About Us", href: "/about" },
   { text: "Contact Us", href: "/contact" },
 ];

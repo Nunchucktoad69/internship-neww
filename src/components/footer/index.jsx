@@ -1,76 +1,69 @@
-import "src/styles/footer.scss";
+import { Link } from "react-router-dom";
+import "./style.scss";
 
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="container grid grid--footer">
         <div className="logo-col">
-          <a href="index.html" className="footer-logo-text">
+          <Link to="/" className="footer-logo-text">
             <span>
               <img src="/images/logo.png" className="logo" />
             </span>
-          </a>
+          </Link>
           <ul className="social-links">
             <li>
-              <a className="footer-link" href="#">
-                <ion-icon
-                  className="social-icon"
-                  name="logo-facebook"
-                ></ion-icon>
-              </a>
+              <Link to="/#" className="footer-link">
+                <ion-icon className="social-icon" name="logo-facebook" />
+              </Link>
             </li>
             <li>
-              <a className="footer-link" href="#">
-                <ion-icon
-                  className="social-icon"
-                  name="logo-instagram"
-                ></ion-icon>
-              </a>
+              <Link to="/#" className="footer-link">
+                <ion-icon className="social-icon" name="logo-instagram" />
+              </Link>
             </li>
           </ul>
           <div className="copy-rights">
-            Copyright &#169; 2023 by Powerzone. All rights reserved.
+            {`Copyright &copy; ${new Date().getFullYear()} by Powerzone. All rights reserved.`}
           </div>
         </div>
         <div className="col-two">
           <ul className="col-two-content">
             <li>
-              <a href="" className="col-two-link">
+              <Link to="/#" className="col-two-link">
                 BMI
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="html/products.html" className="col-two-link">
+              <Link to="/products" className="col-two-link">
                 Products
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="" className="col-two-link">
+              <Link to="/#" className="col-two-link">
                 Routine
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="html/about.html" className="col-two-link">
+              <Link to="/about" className="col-two-link">
                 About Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div className="col-three">
           <p className="col-three-link">
-            <a href="#contact-us" className="col-two-link">
+            <Link to="/#contact-us" className="col-two-link">
               Contact Us
-            </a>
+            </Link>
           </p>
           <address className="contacts">
             <p className="address">
               Mukti Enclave :19/20, Manapakkam Main Rd, Manapakkam, Chennai,
               Tamil Nadu 600125
             </p>
-            <p>
-              <a className="contacts-info">+91 8680880109</a>
-              <a className="contacts-info">powerzonegymchennai@gmail.com </a>
-            </p>
+            <a className="contacts-info">+91 8680880109</a>
+            <a className="contacts-info">powerzonegymchennai@gmail.com </a>
           </address>
         </div>
       </div>

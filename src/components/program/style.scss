@@ -1,0 +1,49 @@
+/* *********  */
+/* PROGRAMS */
+/* ********* */
+
+.program-box {
+  display: flex;
+  gap: 4.8rem;
+
+  & > * {
+    flex: 1;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 9.6rem;
+  }
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .program-heading-box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    gap: 2rem;
+    margin: 2rem 0;
+
+    .program-number {
+      font-size: 3rem;
+      font-weight: 600;
+      color: #fe9b09;
+    }
+  }
+
+  .program-description {
+    font-size: 1.8rem;
+    line-height: 1.8;
+
+    color: rgba(252, 252, 252, 0.705);
+  }
+
+  .program-img-box {
+    .program-img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
