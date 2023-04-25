@@ -1,0 +1,77 @@
+/*
+PRODUCTS
+*/
+
+main {
+  background-color: #111;
+  padding-bottom: 12.8rem;
+}
+
+.products-grid {
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: black;
+  gap: 1rem;
+}
+
+.grid-item {
+  background-color: #222;
+  /* padding: 5rem; */
+  /* text-align: center; */
+  color: white;
+  border-radius: 9px;
+}
+
+.products-text {
+  font-weight: 600;
+  display: flex;
+  gap: 15rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.products-text-inner {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.p-img {
+  height: 75%;
+  width: 100%;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+}
+
+.product-name {
+  font-size: 1.4rem;
+}
+
+.product-price {
+  font-size: 1.8rem;
+  color: #fe9b09;
+}
+.product-rs {
+  font-size: 1.8rem;
+}
+
+.btn-products,
+.btn-products:link,
+.btn-products:visited {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 2rem 4rem;
+  border-radius: 9px;
+  text-transform: uppercase;
+  /* only necessary for btn */
+  border: none;
+  cursor: pointer;
+
+  display: inline-block;
+  transition: all 0.3s;
+
+  color: white;
+  background-color: #cf711f;
+}
