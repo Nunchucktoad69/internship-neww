@@ -4,6 +4,7 @@ import Plan from "src/components/plan";
 import Program from "src/components/program";
 import Review from "src/components/review";
 import "src/styles/home.scss";
+import "src/styles/home.queries.scss";
 
 const programs = [
   {
@@ -14,6 +15,7 @@ const programs = [
       fitness level, offering ongoing feedback and motivation to keep
       you on track.
     `,
+    image: "/images/",
   },
   {
     title: "group training",
@@ -156,7 +158,7 @@ export default function Home() {
 
   return (
     <AppLayout>
-      <main>
+      <main id="home">
         <section className="hero" id="section--0">
           <div className="hero-text">
             <h1 className="caps">Believe</h1>

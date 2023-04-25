@@ -1,59 +1,61 @@
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#home {
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  background-image: linear-gradient(
-      rgba(32, 32, 32, 0.6),
-      rgba(14, 13, 13, 0.6)
-    ),
-    url("/images/hero.jpg");
-  background-size: cover;
+    background-image: linear-gradient(
+        rgba(32, 32, 32, 0.6),
+        rgba(14, 13, 13, 0.6)
+      ),
+      url("/images/hero.jpg");
+    background-size: cover;
 
-  .hero-text {
-    text-align: center;
+    .hero-text {
+      text-align: center;
 
-    h1 {
-      font-size: 10rem;
-      margin-bottom: 2.6rem;
-      color: #fff;
-      font-family: "Rabas Neue", sans-serif;
-    }
+      h1 {
+        font-size: 10rem;
+        margin-bottom: 2.6rem;
+        color: #fff;
+        font-family: "Rabas Neue", sans-serif;
+      }
 
-    .header-text {
-      font-size: 3.2rem;
-      color: white;
-      font-family: "Rabas Neue", sans-serif;
+      .header-text {
+        font-size: 3.2rem;
+        color: white;
+        font-family: "Rabas Neue", sans-serif;
+      }
     }
   }
-}
 
-/* *************************************** */
-/* About US */
+  /* *************************************** */
+  /* About US */
 
-.carousel-item {
-  height: 32rem;
-  background: #fff;
-  background-position: center;
-  background-size: cover;
-}
+  .carousel-item {
+    height: 32rem;
+    background: #fff;
+    background-position: center;
+    background-size: cover;
+  }
 
-/* Moblie navigation */
-/* MOBILE */
-.btn-mobile-nav {
-  border: none;
-  background: none;
-  cursor: pointer;
-  display: none;
-}
+  /* Moblie navigation */
+  /* MOBILE */
+  .btn-mobile-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+  }
 
-.icon-mobile-nav {
-  height: 4.8rem;
-  width: 4.8rem;
-  color: #333;
-}
+  .icon-mobile-nav {
+    height: 4.8rem;
+    width: 4.8rem;
+    color: #333;
+  }
 
-.icon-mobile-nav[name="close-outline"] {
-  display: none;
+  .icon-mobile-nav[name="close-outline"] {
+    display: none;
+  }
 }

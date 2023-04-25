@@ -1,90 +1,177 @@
+.sticky .header {
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+}
+
 .header {
   position: absolute;
   width: 100%;
   height: 9.6rem;
   /* padding-bottom: 3.2rem; */
   z-index: 9;
+
+  .logo {
+    height: 6rem;
+  }
+
+  .nav-container {
+    margin: 0 auto;
+    padding: 2rem 3.2rem;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* MOBILE  */
+  .btn-mobile-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    display: none;
+  }
+
+  .icon-mobile-nav {
+    height: 4.8rem;
+    width: 4.8rem;
+    color: #fff !important;
+  }
+
+  .icon-mobile-nav[name="close-outline"] {
+    display: none;
+  }
+
+  /* *********  */
+  /* NAVIGATION */
+  /* ********* */
+
+  .header-nav-link:link,
+  .header-nav-link:visited {
+    text-decoration: none;
+    color: #fff;
+
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+
+  .header-nav-link:hover,
+  .header-nav-link:active {
+    color: #fe9b09;
+  }
+
+  .header-nav-list {
+    display: flex;
+
+    list-style: none;
+    align-items: center;
+    gap: 4.8rem;
+  }
+
+  .btn--nav,
+  .btn--nav:link,
+  .btn--nav:visited {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+
+    /* only necessary for btn */
+    border: none;
+    cursor: pointer;
+
+    display: inline-block;
+    transition: all 0.3s;
+
+    color: white;
+    background-color: #cf711f;
+  }
+
+  .pfp-wrapper {
+    height: 100%;
+
+    img {
+      border-radius: 50%;
+      max-height: 100%;
+    }
+  }
 }
 
-.sticky .header {
-  position: fixed;
-  background-color: rgb(0, 0, 0);
+// MEDIA QUERIES
+@media (max-width: 84rem) {
+  .nav-container {
+    padding: 1.5rem 2.7rem;
+  }
 }
 
-.logo {
-  height: 6rem;
-}
+/* 976px */
+@media (max-width: 61rem) {
+  .header {
+    /* MOBILE NAVIGATION */
+    .btn-mobile-nav {
+      display: block;
+      position: relative;
+      z-index: 9999;
+    }
 
-.nav-container {
-  /* max-width: 120rem; */
-  margin: 0 auto;
-  padding: 2rem 3.2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .header-nav-list {
+      background-color: #333;
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
 
-/* MOBILE  */
-.btn-mobile-nav {
-  border: none;
-  background: none;
-  cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-  display: none;
-}
+      transform: translateX(100%);
+      transition: all 0.5s ease-in;
 
-.icon-mobile-nav {
-  height: 4.8rem;
-  width: 4.8rem;
-  color: #fff !important;
-}
+      /* hide navigation */
+      /* display:none;  --> allows no transition or animation */
+      /* hide it visually */
+      opacity: 0;
+      /* make it unaccessible to mouse and keyboard */
+      pointer-events: none;
+      /* hide it from screen readers */
+      visibility: hidden;
+    }
 
-.icon-mobile-nav[name="close-outline"] {
-  display: none;
-}
+    &.nav-open {
+      .header-nav-list {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
 
-/* *********  */
-/* NAVIGATION */
-/* ********* */
+        transform: translateX(0);
+      }
 
-.header-nav-link:link,
-.header-nav-link:visited {
-  text-decoration: none;
-  color: #fff;
+      .icon-mobile-nav {
+        &[name="close-outline"] {
+          display: block;
+        }
 
-  font-weight: 500;
-  font-size: 1.6rem;
-}
+        &[name="menu-outline"] {
+          display: none;
+        }
+      }
+    }
 
-.header-nav-link:hover,
-.header-nav-link:active {
-  color: #fe9b09;
-}
+    .header-nav-list {
+      flex-direction: column;
+      gap: 4.8rem;
 
-.header-nav-list {
-  display: flex;
-
-  list-style: none;
-  align-items: center;
-  gap: 4.8rem;
-}
-
-.btn--nav,
-.btn--nav:link,
-.btn--nav:visited {
-  text-decoration: none;
-  font-size: 1.6rem;
-  font-weight: 600;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-
-  /* only necessary for btn */
-  border: none;
-  cursor: pointer;
-
-  display: inline-block;
-  transition: all 0.3s;
-
-  color: white;
-  background-color: #cf711f;
+      .header-nav-link {
+        &:link,
+        &:visited {
+          font-size: 2.6rem;
+        }
+      }
+    }
+  }
 }

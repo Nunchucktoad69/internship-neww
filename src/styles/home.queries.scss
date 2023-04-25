@@ -1,0 +1,308 @@
+/* 1344px */
+@media (max-width: 84rem) {
+  #home {
+    .subheading {
+      font-size: 3rem;
+    }
+
+    .heading-primary {
+      font-size: 5.2rem;
+    }
+
+    .heading-secondary {
+      font-size: 4.4rem;
+    }
+  }
+}
+
+/* 1136px */
+@media (max-width: 74rem) {
+  #home {
+    h1 {
+      font-size: 9rem;
+    }
+
+    .header-text {
+      font-size: 2.6rem;
+      max-width: 100rem;
+    }
+
+    .container {
+      max-width: 100rem;
+    }
+
+    .section {
+      padding: 8rem 0;
+    }
+
+    .program-heading-box {
+      margin: 1.5rem 0;
+      gap: 1.5rem;
+    }
+
+    .program-description {
+      font-size: 1.6rem;
+    }
+
+    .plan {
+      padding: 2rem 2.6rem;
+    }
+
+    .plan-type {
+      font-size: 1.6rem;
+      /* padding: 0.6rem; */
+    }
+
+    .plan-rs {
+      font-size: 2.6rem;
+    }
+
+    .plan-cost {
+      font-size: 5rem;
+    }
+
+    .plan-about {
+      font-size: 1.6rem;
+      padding: 3.6rem 0 1.4rem 0;
+    }
+
+    .btn,
+    .btn:link,
+    .btn:visited {
+      font-size: 1.6rem;
+    }
+
+    .username {
+      font-size: 2.6rem;
+    }
+
+    .testimonial-text {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+/* 976px */
+@media (max-width: 61rem) {
+  h1 {
+    font-size: 7rem;
+  }
+
+  #home {
+    .header-text {
+      font-size: 2rem;
+    }
+
+    .grid {
+      row-gap: 8rem;
+      column-gap: 4rem;
+    }
+
+    .heading-secondary {
+      font-size: 3.2rem;
+    }
+
+    .subheading {
+      font-size: 2.4rem;
+    }
+
+    .program-img {
+      width: 60%;
+    }
+
+    .program-description {
+      font-size: 1.4rem;
+    }
+
+    .program-number {
+      font-size: 2.6rem;
+    }
+
+    .program-text {
+      font-size: 2.6rem;
+    }
+
+    .heading-tertiary {
+      font-size: 2.6rem;
+    }
+
+    .grid--4-cols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .plans-container {
+      align-items: center;
+      justify-items: center;
+    }
+
+    .plan {
+      height: 36rem;
+      max-width: 27rem;
+    }
+
+    .testimonial-text {
+      font-size: 1.2rem;
+    }
+
+    .col-two-link {
+      font-size: 1.4rem;
+    }
+
+    .contacts {
+      font-size: 1.2rem;
+    }
+
+    .address {
+      font-size: 1.2rem;
+    }
+
+    .home-page {
+      font-size: 1.2rem;
+    }
+
+    .grid {
+      row-gap: 6rem;
+      column-gap: 3rem;
+    }
+
+    .footer {
+      padding: 9.6rem 0;
+    }
+
+    .subheading {
+      padding-top: 9.6rem;
+    }
+  }
+}
+
+/* 672px */
+@media (max-width: 42rem) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  #home {
+    .section {
+      padding: 6rem 0;
+    }
+
+    .header-text {
+      font-size: 1.6rem;
+      max-width: 50rem;
+    }
+
+    .heading-tertiary {
+      font-size: 2rem;
+    }
+
+    .heading-secondary {
+      font-size: 2.4rem;
+    }
+
+    .program-number {
+      font-size: 2.4rem;
+    }
+
+    .program-description {
+      font-size: 1.2rem;
+    }
+
+    .subheading {
+      padding-top: 2rem;
+    }
+
+    .heading-secondary {
+      margin-bottom: 6rem;
+    }
+
+    .footer {
+      padding: 6rem 0;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo-col {
+      align-items: center;
+      grid-row: 2;
+      grid-column: span 2;
+    }
+
+    .grid {
+      row-gap: 6rem;
+    }
+
+    .grid--footer {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .user-avatar {
+      min-height: 6rem;
+      min-width: 6rem;
+    }
+
+    .program-number {
+      font-size: 2rem;
+    }
+  }
+}
+
+/* 544px */
+@media (max-width: 34rem) {
+  html {
+    font-size: 50%;
+  }
+
+  #home {
+    h1 {
+      font-size: 4rem;
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    .grid--2-cols,
+    .grid--4-cols {
+      grid-template-columns: 1fr;
+    }
+
+    .program-box {
+      flex-direction: column !important;
+
+      .program-img-box {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .heading-tertiary {
+      letter-spacing: 0.4rem;
+    }
+
+    .header-text {
+      font-size: 1.4rem;
+      max-width: 30rem;
+    }
+
+    .slide {
+      gap: 2.4rem;
+    }
+
+    .username {
+      font-size: 2.2rem;
+    }
+
+    .testimonial-stars {
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .container {
+      padding: 0 3.2rem;
+    }
+
+    .slider__btn {
+      top: 40%;
+    }
+  }
+}

@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
+import { IonIcon } from "@ionic/react";
 import "./style.scss";
+import { useState } from "react";
+import classNames from "classnames";
+import { auth } from "src/modules/firebase";
 
 const links = [
   { text: "BMI", href: "/#" },
@@ -10,8 +14,16 @@ const links = [
 ];
 
 export default function Header() {
+  const [isNavOpen, setNavOpen] = useState(false);
+
+  const user = auth.currentUser;
+
+  const handleNavClick = () => {
+    setNavOpen(!isNavOpen);
+  };
+
   return (
-    <header className="header">
+    <header className={classNames("header", { "nav-open": isNavOpen })}>
       <nav className="nav-container">
         <img className="logo" alt="Powerzone logo" src="/images/logo.png" />
 
@@ -23,18 +35,28 @@ export default function Header() {
               </Link>
             </li>
           ))}
-          <li>
-            <a className="header-nav-link btn--nav caps" href="#">
-              Join Now
-            </a>
-          </li>
+          {/* Hide Auth button when user is signed in */}
+          {!user && (
+            <li>
+              <a className="header-nav-link btn--nav caps" href="/auth">
+                Join Now
+              </a>
+            </li>
+          )}
         </ul>
-      </nav>
 
-      <button className="btn-mobile-nav">
-        <ion-icon className="icon-mobile-nav" name="menu-outline"></ion-icon>
-        <ion-icon className="icon-mobile-nav" name="close-outline"></ion-icon>
-      </button>
+        <button className="btn-mobile-nav" onClick={handleNavClick}>
+          <IonIcon class="icon-mobile-nav" name="menu-outline" />
+          <IonIcon class="icon-mobile-nav" name="close-outline" />
+        </button>
+
+        {/* Show pfp url if user logged in */}
+        {user && (
+          <div className="pfp-wrapper">
+            <img src={user.photoURL} alt={user.displayName} />
+          </div>
+        )}
+      </nav>
     </header>
   );
 }
