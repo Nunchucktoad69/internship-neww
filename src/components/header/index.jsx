@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { IonIcon } from "@ionic/react";
 import { useEffect, useState } from "react";
 import classNames from "classnames";
-import { auth } from "src/modules/firebase";
 import "./style.scss";
+import { getAuth } from "firebase/auth";
 
 const links = [
   { text: "BMI", href: "/#" },
@@ -16,7 +16,7 @@ const links = [
 export default function Header() {
   const [isNavOpen, setNavOpen] = useState(false);
 
-  const user = auth.currentUser;
+  const user = getAuth().currentUser;
 
   const handleStickyNav = (entries) => {
     const [entry] = entries;
