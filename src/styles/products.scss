@@ -1,0 +1,148 @@
+/*
+CART
+ */
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 360px;
+  min-height: 100vh;
+  padding: 20px;
+  background: #cf711f;
+  box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+  transition: 0.3s;
+  z-index: 99;
+
+  .cart-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+  }
+
+  .total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid white;
+    padding: 1rem 0;
+
+    .total-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .total-price {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .btn-buy {
+    padding: 12px 20px;
+    margin-left: 110px;
+
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 600;
+      padding: 1.6rem 3.2rem;
+      border-radius: 1rem;
+
+      border: none;
+      cursor: pointer;
+
+      display: inline-block;
+      transition: all 0.3s;
+      background-color: #000;
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: #222;
+    }
+  }
+}
+
+.cart-flex {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 6rem;
+}
+
+.cart-text {
+  font-weight: bold;
+  font-size: 4rem;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.cart-icon {
+  height: 4rem;
+  width: 4rem;
+  color: white;
+}
+
+.cart-icon:hover {
+  color: #999;
+}
+
+.cart.active {
+  right: 0;
+}
+
+.cart-box {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cart-img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.detail-box {
+  display: grid;
+  row-gap: 0.5rem;
+}
+
+.cart-product-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+}
+
+.cart-price {
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+
+.cart-quantity {
+  border: 1px solid #111;
+  outline-color: #111;
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cart-remove {
+  font-size: 24px;
+  color: #111;
+  cursor: pointer;
+}
+
+#close-cart,
+#close-cart ion-icon {
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 5rem;
+  color: #fff;
+  cursor: pointer;
+}

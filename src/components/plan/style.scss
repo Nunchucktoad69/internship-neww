@@ -1,0 +1,72 @@
+/* *********  */
+/* Membership */
+/* ********* */
+
+.plans-container {
+  column-gap: 3rem !important;
+}
+
+.plan {
+  border: 2px solid rgb(0, 0, 0, 0.05);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 1rem;
+  align-items: center;
+  padding: 2.4rem 3rem;
+
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.plan-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.plan-type {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0.8rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fe9b09;
+}
+
+.plan-rs {
+  font-size: 3rem;
+  margin-right: 0.8rem;
+}
+
+.plan-cost {
+  font-size: 5.6rem;
+  font-weight: 600;
+}
+
+.plan-about {
+  font-size: 1.8rem;
+  padding: 4.6rem 0 2rem 0;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.plan-btn {
+  margin-top: auto;
+  text-transform: uppercase;
+}
+
+.plan-rec {
+  background-color: #fe9b09;
+}
+
+.plan-rec * {
+  color: #333;
+}
+
+.plan-rec .plan-type {
+  color: white;
+}
+
+.plan-rec .plan-btn.btn.btn--full {
+  background-color: #343434;
+  color: white;
+}
