@@ -9,7 +9,7 @@ import { AuthContext } from "src/modules/auth-context";
 const links = [
   { text: "BMI", href: "/#" },
   { text: "Products", href: "/products" },
-  { text: "Routines", href: "/#section--3" },
+  { text: "Routines", href: "/routines" },
   { text: "About Us", href: "/about" },
   { text: "Contact Us", href: "/contact" },
 ];

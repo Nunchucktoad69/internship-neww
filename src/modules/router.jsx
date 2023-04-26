@@ -4,6 +4,7 @@ import AboutRoute from "src/pages/about";
 import AuthRoute from "src/pages/auth";
 import ContactRoute from "src/pages/contact";
 import ProductRoute from "src/pages/products";
+import RoutinesRoute from "src/pages/routines";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/auth",
     element: <AuthRoute />,
+  },
+  {
+    path: "/routines",
+    element: <RoutinesRoute />,
   },
   {
     path: "/products",
