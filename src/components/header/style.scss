@@ -33,6 +33,12 @@
     align-items: center;
   }
 
+  .nav-flexend {
+    display: flex;
+    height: 100%;
+    gap: 2.4rem;
+  }
+
   /* MOBILE  */
   .btn-mobile-nav {
     border: none;

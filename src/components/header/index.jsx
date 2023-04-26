@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { IonIcon } from "@ionic/react";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import classNames from "classnames";
 import "./style.scss";
-import { getAuth } from "firebase/auth";
+import { menu, close } from "ionicons/icons";
+import { AuthContext } from "src/modules/auth-context";
 
 const links = [
   { text: "BMI", href: "/#" },
@@ -15,12 +16,10 @@ const links = [
 
 export default function Header() {
   const [isNavOpen, setNavOpen] = useState(false);
-
-  const user = getAuth().currentUser;
+  const { user } = useContext(AuthContext);
 
   const handleStickyNav = (entries) => {
     const [entry] = entries;
-    // console.log(entry);
 
     if (!entry.isIntersecting) document.body.classList.add("sticky");
     else document.body.classList.remove("sticky");
@@ -67,44 +66,54 @@ export default function Header() {
         <nav className="nav-container">
           <img className="logo" alt="Powerzone logo" src="/images/logo.png" />
 
-          <ul
-            className="header-nav-list"
-            onMouseOver={handleLinkHover}
-            onMouseOut={handleLinkHover}
-          >
-            {links.map((item, i) => (
-              <li key={i}>
-                <Link
-                  to={item.href}
-                  className="header-nav-link caps"
-                  onMouseOver={handleLinkHover}
-                  onMouseOut={handleLinkHover}
-                >
-                  {item.text}
-                </Link>
-              </li>
-            ))}
-            {/* Hide Auth button when user is signed in */}
-            {!user && (
-              <li>
-                <a className="header-nav-link btn--nav caps" href="/auth">
-                  Join Now
-                </a>
-              </li>
+          <div className="nav-flexend">
+            <ul
+              className="header-nav-list"
+              onMouseOver={handleLinkHover}
+              onMouseOut={handleLinkHover}
+            >
+              {links.map((item, i) => (
+                <li key={i}>
+                  <Link
+                    to={item.href}
+                    className="header-nav-link caps"
+                    onMouseOver={handleLinkHover}
+                    onMouseOut={handleLinkHover}
+                  >
+                    {item.text}
+                  </Link>
+                </li>
+              ))}
+              {/* Hide Auth button when user is signed in */}
+              {!user && (
+                <li>
+                  <a className="header-nav-link btn--nav caps" href="/auth">
+                    Join Now
+                  </a>
+                </li>
+              )}
+            </ul>
+
+            {/* Show pfp url if user logged in */}
+            {user && user.photoURL && (
+              <div className="pfp-wrapper">
+                <img src={user.photoURL} alt={user.displayName} />
+              </div>
             )}
-          </ul>
 
-          <button className="btn-mobile-nav" onClick={handleNavClick}>
-            <IonIcon class="icon-mobile-nav" name="menu-outline" />
-            <IonIcon class="icon-mobile-nav" name="close-outline" />
-          </button>
-
-          {/* Show pfp url if user logged in */}
-          {user && user.photoURL && (
-            <div className="pfp-wrapper">
-              <img src={user.photoURL} alt={user.displayName} />
-            </div>
-          )}
+            <button className="btn-mobile-nav" onClick={handleNavClick}>
+              <IonIcon
+                class="icon-mobile-nav"
+                name="menu-outline"
+                icon={menu}
+              />
+              <IonIcon
+                class="icon-mobile-nav"
+                name="close-outline"
+                icon={close}
+              />
+            </button>
+          </div>
         </nav>
       </header>
       <div className="dummy"></div>
