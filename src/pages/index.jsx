@@ -52,7 +52,7 @@ const programs = [
   },
   {
     title: "HIIT and cardio",
-    image: "/images/c.jpg",
+    image: "/images/hitcardio.jpg",
     desc: `High-Intensity Interval Training (HIIT) and cardio workouts
       offer numerous health benefits, including increased
       cardiovascular endurance, improved metabolism, and fat loss.
@@ -72,6 +72,7 @@ const programs = [
   },
   {
     title: "yoga",
+    image: "/images/yoga.jfif",
     desc: `Our yoga classes offer a welcoming and supportive
       environment for individuals of all levels, led by experienced
       instructors who guide you through a variety of poses and
