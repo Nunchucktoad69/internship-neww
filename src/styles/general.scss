@@ -222,3 +222,11 @@ main {
 .btn--full:active {
   background-color: #cf711f;
 }
+
+button {
+  outline: none;
+  background-color: inherit;
+  color: inherit;
+  border: inherit;
+  cursor: pointer;
+}

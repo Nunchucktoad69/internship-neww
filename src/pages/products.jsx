@@ -1,8 +1,12 @@
+import { IonIcon } from "@ionic/react";
 import classNames from "classnames";
 import { useState } from "react";
 import AppLayout from "src/components/layout";
 import Product from "src/components/product";
 import "src/styles/products.scss";
+import { useImmer } from "use-immer";
+import { cartOutline, close } from "ionicons/icons";
+import ProductCartItem from "src/components/cart-item";
 
 const products = [
   {
@@ -40,8 +44,49 @@ const products = [
 export default function ProductRoute() {
   const [isCartOpen, setCartOpen] = useState(false);
 
+  const [cart, setCart] = useImmer([]);
+
+  const total = cart.reduce(
+    (prev, item) => prev + products[item.index].price * Number(item.count),
+    0
+  );
+
   const handleCartClick = () => {
     setCartOpen(!isCartOpen);
+  };
+
+  const onProductClick = (index) => {
+    setCartOpen(true);
+    const cartItemIndex = cart.findIndex((item) => item.index === index);
+    console.log(cartItemIndex);
+    if (cartItemIndex === -1) {
+      setCart((cart) => {
+        cart.push({ index, count: 1 });
+      });
+    } else {
+      setCart((cart) => {
+        cart[cartItemIndex].count++;
+      });
+    }
+  };
+
+  const onCountChange = (index, newCount) => {
+    if (newCount < 0) return;
+    setCart((cart) => {
+      const cartItem = cart.find((item) => item.index === index);
+      cartItem.count = newCount;
+    });
+  };
+
+  const onCartRemove = (index) => {
+    setCart((cart) => {
+      return cart.filter((item) => item.index !== index);
+    });
+  };
+
+  const onCheckout = () => {
+    alert(`Thank you for your purchase! Your total is Rs ${total}`);
+    setCart([]);
   };
 
   return (
@@ -55,10 +100,10 @@ export default function ProductRoute() {
           <div className="cart-flex">
             <p className="cart-text">OPEN CART</p>
             <button className="nav-link" onClick={handleCartClick}>
-              <ion-icon
-                className="cart-icon"
+              <IonIcon
                 id="cart-icon"
-                name="cart-outline"
+                className="cart-icon"
+                icon={cartOutline}
               />
             </button>
           </div>
@@ -71,6 +116,7 @@ export default function ProductRoute() {
                 name={product.name}
                 image={product.image}
                 price={product.price}
+                onClick={() => onProductClick(i)}
               />
             ))}
           </div>
@@ -79,27 +125,30 @@ export default function ProductRoute() {
         {/* Products Cart */}
         <div className={classNames("cart", { active: isCartOpen })}>
           <h2 className="cart-title">Your Cart</h2>
-          <div className="cart-content"></div>
-          <div className="total">
-            <div className="total-title">Total</div>
-            <div className="total-price">Rs0</div>
+
+          <div className="cart-content">
+            {cart.map((item) => (
+              <ProductCartItem
+                key={item.index}
+                count={item.count}
+                product={products[item.index]}
+                onCountChange={onCountChange.bind(undefined, item.index)}
+                onCartRemove={() => onCartRemove(item.index)}
+              />
+            ))}
           </div>
 
-          <button type="button" className="btn-buy">
+          <div className="total">
+            <div className="total-title">Total</div>
+            <div className="total-price">{`Rs ${total.toLocaleString()}`}</div>
+          </div>
+
+          <button type="button" className="btn-buy" onClick={onCheckout}>
             Buy Now
           </button>
 
           <button id="close-cart" onClick={handleCartClick}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="bi bi-x-lg"
-              viewBox="0 0 16 16"
-            >
-              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-            </svg>
+            <IonIcon icon={close} />
           </button>
         </div>
       </main>

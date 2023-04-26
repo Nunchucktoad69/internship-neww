@@ -137,7 +137,8 @@ CART
   cursor: pointer;
 }
 
-#close-cart {
+#close-cart,
+#close-cart ion-icon {
   position: absolute;
   top: 1rem;
   right: 0.8rem;

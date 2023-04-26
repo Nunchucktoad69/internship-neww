@@ -5,20 +5,23 @@ import Program from "src/components/program";
 import Review from "src/components/review";
 import "src/styles/home.scss";
 import "src/styles/home.queries.scss";
+import useSectionTransition from "src/modules/use-section-transition";
+import classNames from "classnames";
 
 const programs = [
   {
     title: "Our programs",
+    image: "/images/personal.jpg",
     desc: `Personal training provides tailored fitness guidance and support
       to help you achieve your desired results. A personal trainer
       creates a customized workout plan based on your unique needs and
       fitness level, offering ongoing feedback and motivation to keep
       you on track.
     `,
-    image: "/images/",
   },
   {
     title: "group training",
+    image: "/images/group.jpg",
     desc: `Our gym offers group training sessions to provide a fun and
       social way to achieve your fitness goals. Our certified trainers
       lead each session, ensuring proper form and technique while
@@ -28,6 +31,7 @@ const programs = [
   },
   {
     title: "strength training",
+    image: "/images/strength.jpg",
     desc: `We also offer you the chance to focus on strength training with
       our state-of-the-art equipment and experienced trainers. Our
       customized plans will help you build muscle, increase your
@@ -37,6 +41,7 @@ const programs = [
   },
   {
     title: "crossfit",
+    image: "/images/crossfit.jpg",
     desc: `CrossFit is a high-intensity workout program designed to build
       strength and endurance through functional movements. It
       incorporates elements from weightlifting, gymnastics, and
@@ -47,6 +52,7 @@ const programs = [
   },
   {
     title: "HIIT and cardio",
+    image: "/images/c.jpg",
     desc: `High-Intensity Interval Training (HIIT) and cardio workouts
       offer numerous health benefits, including increased
       cardiovascular endurance, improved metabolism, and fat loss.
@@ -56,6 +62,7 @@ const programs = [
   },
   {
     title: "Zumba",
+    image: "/images/zumba.jpg",
     desc: `Our gym offers Zumba classes, a fun and energetic dance
       workout that combines Latin and international music with
       easy-to-follow moves. It&apos;s a great way to burn calories,
@@ -138,6 +145,7 @@ const reviews = [
 ];
 
 export default function Home() {
+  useSectionTransition();
   const [reviewIndex, setReviewIndex] = useState(0);
 
   const onPrevReview = () => {
@@ -154,7 +162,7 @@ export default function Home() {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [reviewIndex]);
 
   return (
     <AppLayout>
@@ -177,7 +185,13 @@ export default function Home() {
 
           <div className="container">
             {programs.map((item, i) => (
-              <Program key={i} index={i} title={item.title} desc={item.desc} />
+              <Program
+                key={i}
+                index={i}
+                title={item.title}
+                desc={item.desc}
+                image={item.image}
+              />
             ))}
           </div>
         </section>
@@ -233,7 +247,17 @@ export default function Home() {
               >
                 <ion-icon name="chevron-forward" />
               </button>
-              <div className="dots"></div>
+              <div className="dots">
+                {reviews.map((item, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setReviewIndex(i)}
+                    className={classNames("dots__dot", {
+                      "dots__dot--active": i === reviewIndex,
+                    })}
+                  ></button>
+                ))}
+              </div>
             </div>
           </div>
         </section>

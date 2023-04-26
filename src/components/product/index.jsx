@@ -5,6 +5,7 @@ Product.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default function Product(props) {
@@ -19,8 +20,12 @@ export default function Product(props) {
             {props.price}
           </p>
         </div>
-        <button href="#" className="btn-products add-cart">
-          buy
+        <button
+          href="#"
+          className="btn-products add-cart"
+          onClick={props.onClick}
+        >
+          Buy
         </button>
       </div>
     </div>
