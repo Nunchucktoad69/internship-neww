@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "src/pages";
 import AboutRoute from "src/pages/about";
 import AuthRoute from "src/pages/auth";
+import BMIRoute from "src/pages/bmi";
 import ContactRoute from "src/pages/contact";
 import ProductRoute from "src/pages/products";
 import RoutinesRoute from "src/pages/routines";
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <AboutRoute />,
+  },
+  {
+    path: "/bmi",
+    element: <BMIRoute />,
   },
 ]);
 

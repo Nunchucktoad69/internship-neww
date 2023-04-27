@@ -1,24 +1,24 @@
 import { useEffect } from "react";
-import AppLayout from "src/components/layout";
-import html from "src/components/routines";
-import routineStyles from "src/styles/routines.styles";
+import html from "src/components/bmi";
+import bmiStyles from "src/styles/bmi.styles";
 
 let isStyled = false;
 
-export default function RoutinesRoute() {
+export default function BMIRoute() {
   useEffect(() => {
     if (isStyled) return;
 
     const style = document.createElement("style");
-    style.innerHTML = routineStyles;
+    style.innerHTML = bmiStyles;
     isStyled = true;
 
     document.head.appendChild(style);
   }, []);
 
   return (
-    <AppLayout>
+    <>
       <div dangerouslySetInnerHTML={{ __html: html }}></div>
-    </AppLayout>
+      <script src="/bmi-script.js"></script>
+    </>
   );
 }

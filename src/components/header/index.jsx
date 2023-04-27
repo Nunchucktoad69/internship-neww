@@ -7,7 +7,7 @@ import { menu, close } from "ionicons/icons";
 import { AuthContext } from "src/modules/auth-context";
 
 const links = [
-  { text: "BMI", href: "/#" },
+  { text: "BMI", href: "/bmi" },
   { text: "Products", href: "/products" },
   { text: "Routines", href: "/routines" },
   { text: "About Us", href: "/about" },
@@ -48,7 +48,6 @@ export default function Header() {
   }, []);
 
   const handleLinkHover = (event) => {
-    console.log(event.type);
     const ul = document.querySelector(".header-nav-list");
 
     if (event.target.classList.contains("header-nav-link")) {
