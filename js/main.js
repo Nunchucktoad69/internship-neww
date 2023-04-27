@@ -1,14 +1,14 @@
 // PAGE NAVIGATION
-document.querySelector(".nav-scroll").addEventListener("click", function (e) {
-  e.preventDefault();
-  console.log("click");
+// document.querySelector(".nav-scroll").addEventListener("click", function (e) {
+//   e.preventDefault();
+//   console.log("click");
 
-  if (e.target.classList.contains("nav-scroll")) {
-    const id = e.target.getAttribute("href");
-    console.log(id);
-    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-  }
-});
+//   if (e.target.classList.contains("nav-scroll")) {
+//     const id = e.target.getAttribute("href");
+//     console.log(id);
+//     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+//   }
+// });
 
 ///////////////////////////////////////
 // MENU FADE ANIMATION
